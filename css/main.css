@@ -1,0 +1,209 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  font-size: 1.6rem;
+}
+
+.dark header .logo {
+  color: #fff;
+}
+.dark .btns .icono {
+  color: #fff;
+}
+.dark .main .mask {
+  filter: invert(1);
+  mix-blend-mode: multiply;
+}
+.dark .navigation {
+  background: #333;
+}
+.dark .navigation li a {
+  color: #fff;
+}
+.dark .navigation li a:hover {
+  background: #fff;
+  color: #333;
+}
+.dark .copyright-text {
+  color: #fff;
+}
+.dark .sci li a {
+  color: #fff;
+}
+
+header {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 4rem 10rem;
+  z-index: 10000;
+}
+header .logo {
+  position: relative;
+  display: inline-flex;
+  color: #333;
+  font-size: 2em;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.right-side {
+  display: flex;
+}
+
+.btns {
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+.btns .icono {
+  font-size: 1.5em;
+  color: #333;
+}
+.btns .icono:nth-child(2) {
+  display: none;
+}
+.btns.active .icono:nth-child(2) {
+  display: block;
+}
+.btns.active .icono:nth-child(1) {
+  display: none;
+}
+.btns.menu-toggle .icono {
+  font-size: 3em;
+}
+
+.main {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main .mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  user-select: none;
+  mix-blend-mode: screen;
+}
+.main .heading-secondary {
+  position: relative;
+  z-index: 3;
+  font-size: 16vw;
+  color: #fff;
+  text-shadow: 0 2rem 3rem rgba(51, 51, 51, 0.2);
+}
+
+.navigation {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #fff;
+  z-index: 4;
+  transition: 0.5s;
+}
+.navigation.active {
+  left: 0;
+}
+.navigation li {
+  list-style: none;
+}
+.navigation li a {
+  display: inline-block;
+  margin: 0.5rem 0;
+  font-size: 1.35em;
+  text-decoration: none;
+  color: #333;
+  padding: 0.5rem 2rem;
+  border-radius: 4rem;
+  transition: 0.3s;
+}
+.navigation li a:hover {
+  background: #333;
+  color: #fff;
+}
+
+.copyright-text {
+  position: absolute;
+  left: 10rem;
+  bottom: 4rem;
+  z-index: 4;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.2em;
+}
+
+.sci {
+  position: absolute;
+  right: 10rem;
+  bottom: 4rem;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+}
+.sci li {
+  list-style: none;
+}
+.sci li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.75em;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 2rem;
+  }
+
+  .copyright-text {
+    left: 2rem;
+    bottom: 3rem;
+  }
+
+  .sci {
+    right: 2rem;
+    bottom: 2rem;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
